@@ -1,0 +1,115 @@
+/* styles.css */
+
+/* Estilo general */
+body {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgb(125, 22, 22);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #1e90ff; /* Color de enlaces */
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Color de enlace en hover */
+    transition: color 0.3s ease;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Estilo para las secciones */
+.ejercicio {
+    background-color: #1f1f1f;
+    border: 2px solid rgb(69, 141, 178); /* Bordes rojos */
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.ejercicio:hover {
+    transform: scale(1.02); /* Escalar ligeramente en hover */
+}
+
+h2 {
+    color: #1e90ff; /* Color de los títulos */
+}
+
+/* Estilo para el código */
+pre {
+    background-color: #282828; /* Fondo del bloque de código */
+    padding: 10px;
+    border: 1px solid red; /* Borde rojo para el código */
+    border-radius: 5px;
+    overflow: auto;
+}
+
+/* Estilo para botones */
+button {
+    background-color: #1e90ff; /* Color del botón */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bfff; /* Color en hover */
+    transform: scale(1.05); /* Escalar ligeramente en hover */
+}
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-top: 2px solid red;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Cambiar a vertical en pantallas pequeñas */
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .ejercicio {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* Botones de ancho completo en móviles */
+        margin-top: 10px;
+    }
+}

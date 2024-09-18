@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final Programación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PROYECTO FINAL</h1>
+        <nav>
+            <ul>
+                <li><a href="#ejercicio1">Ejercicio 1</a></li>
+                <li><a href="#ejercicio2">Ejercicio 2</a></li>
+                <li><a href="#ejercicio3">Ejercicio 3</a></li>
+                <li><a href="#ejercicio4">Ejercicio 4</a></li>
+                <li><a href="#ejercicio5">Ejercicio 5</a></li>
+                <li><a href="#ejercicio6">Ejercicio 6</a></li>
+                <li><a href="#ejercicio7">Ejercicio 7</a></li>
+                <li><a href="#ejercicio8">Ejercicio 8</a></li>
+                <li><a href="#ejercicio9">Ejercicio 9</a></li>
+                <li><a href="#ejercicio10">Ejercicio 10</a></li>
+                <li><a href="#ejercicio11">Ejercicio 11</a></li>
+                <li><a href="#ejercicio12">Ejercicio 12</a></li>
+                <li><a href="#ejercicio13">Ejercicio 13</a></li>
+                <li><a href="#ejercicio14">Ejercicio 14</a></li>
+                <li><a href="#ejercicio15">Ejercicio 15</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Ejercicio 1 -->
+        <section id="ejercicio1" class="ejercicio">
+            <h2>Ejercicio 1: Numeros par o impar</h2>
+            <p>Este código es para determinar si un número es par o impar solicita al usuario que ingrese un número entero. Utiliza la operación de módulo para verificar si el número dividido por 2 tiene un residuo de 0 (par) o 1 (impar). Finalmente, muestra un mensaje indicando el resultado.</p>
+            <pre><code>//Declare variables
+                var numero = parseInt(prompt("Ingresa un número:"));
+                
+                // Process finished results
+                if(numero % 2 === 0) {
+                    document.write("El número " + numero + " es par.");
+                } else {
+                    document.write("El número " + numero + " es impar.");
+                };</code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/1paroimpar/index.html"><button>Ejercicio 1</button></a>
+        </section>
+
+        <!-- Repite el bloque anterior para los demás ejercicios -->
+        <section id="ejercicio2" class="ejercicio">
+            <h2>Ejercicio 2: Dia de Semana</h2>
+            <p>El código que determina el día de la semana solicita al usuario un número del 1 al 7, donde cada número corresponde a un día específico. Utiliza una estructura condicional o una lista para mapear el número al día correspondiente. Finalmente, muestra el nombre del día de la semana asociado al número ingresado.</p>
+            <pre><code>//ingrese un número del 1 al 7
+                let numero = prompt("ingresa un numero del 1 al 7:");
+                
+                // definiendo valores
+                numero = parseInt(numero);
+                
+                // mostrando valor del dia
+                switch (numero) {
+                    case 1:
+                        document.write("El numero corresponde al día domingo");
+                        break;
+                    case 2:
+                        document.write("El numero corresponde al día lunes");
+                        break;
+                    case 3:
+                        document.write("El numero corresponde al día martes");
+                        break;
+                    case 4:
+                        document.write("El numero corresponde al día miércoles");
+                        break;
+                    case 5:
+                        document.write("El numero corresponde al día jueves");
+                        break;
+                    case 6:
+                        document.write("El numero corresponde al día viernes");
+                        break;
+                    case 7:
+                        document.write("El numero corresponde al día sábado");
+                        break;
+                    default:
+                        document.write("El numero ingresado no está dentro del rango válido");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/2diadesmana/index.html"><button>Ejercicio 2</button></a>
+        </section>
+
+        <!-- Continúa hasta el ejercicio 15 -->
+        <section id="ejercicio3" class="ejercicio">
+            <h2>Ejercicio 3: Mayor de Dos numeros</h2>
+            <p>Este código es el que encuentra el mayor de dos números solicita al usuario que ingrese ambos valores. Utiliza una comparación para determinar cuál de los dos números es mayor. Finalmente, muestra el número mayor como resultado.</p>
+            <pre><code>// Solicitar al usuario ingresar dos números
+                var num1 = parseFloat(prompt("Ingresa el primer número:"));
+                var num2 = parseFloat(prompt("Ingresa el segundo número:"));
+                
+                // Determinar cuál de los dos números es mayor
+                if(num1 > num2) {
+                    document.write("El primer número (" + num1 + ") es mayor que el segundo número (" + num2 + ").");
+                } else if(num2 > num1) {
+                    document.write("El segundo número (" + num2 + ") es mayor que el primer número (" + num1 + ").");
+                } else {
+                    document.write("Los dos números son iguales (" + num1 + ").");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/3mayordedos/index.html"><button>Ejercicio 3</button></a>
+        </section>
+        
+        <!-- Añadir secciones hasta el ejercicio 15 -->
+        
+        <section id="ejercicio4" class="ejercicio">
+            <h2>Ejercicio 4: Factorial</h2>
+            <p>Este código calcula el factorial de un número solicita al usuario que ingrese un número entero no negativo. Utiliza un bucle o una función recursiva para multiplicar todos los enteros desde 1 hasta el número ingresado. Finalmente, muestra el resultado del cálculo del factorial.</p>
+            <pre><code>//ingrese un número
+                let numero = prompt("ingresa un número para calcular su factorial:");
+                
+                numero = parseInt(numero);
+                
+                // Verificar si el número ingresado es válido
+                if (numero < 0) {
+                    document.write("El factorial de un numero negativo no esta definido");
+                } else {
+                    let factorial = 1;
+                    let contador = 1;
+                
+                    // Calcular el factorial 
+                    do {
+                        factorial *= contador;
+                        contador++;
+                    } while (contador <= numero);
+                
+                    // Mostrar el resultado 
+                    document.write("El factorial de " + numero + " es " + factorial + ".");
+                }
+                </code></pre>
+            <p>Resultado: Mensaje final.</p>
+            <a href="Last/3factorial/index.html"><button>Ejercicio 4</button></a>
+        </section>
+
+        <section id="ejercicio5" class="ejercicio">
+            <h2>Ejercicio 5: Numero del 1 al 10</h2>
+            <p>
+                Este código imprime los números del 1 al 10 utiliza un bucle para iterar desde 1 hasta 10. En cada iteración, muestra el número actual en la consola. Al finalizar, se presenta la secuencia completa de números del 1 al 10.</p>
+            <pre><code>//imprimir los números del 1 al 10.
+                for (let i = 1; i <= 10; i++) {
+                    document.write(i + "<br>");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/4numerode1a10/index.html"><button>Ejercicio 5</button></a>
+
+        </section>
+        <section id="ejercicio6" class="ejercicio">
+            <h2>Ejercicio 6: Mayor de tres numeros</h2>
+            <p>
+                El código que encuentra el mayor de tres números solicita al usuario que ingrese los tres valores. Utiliza comparaciones para determinar cuál de los tres es el más grande. Finalmente, muestra el número mayor como resultado.</p>
+            <pre><code>// Solicitar al usuario ingresar tres números
+                var num1 = parseFloat(prompt("Ingresa el primer número:"));
+                var num2 = parseFloat(prompt("Ingresa el segundo número:"));
+                var num3 = parseFloat(prompt("Ingresa el tercer número:"));
+                
+                // Determinar cuál de los tres números es el mayor
+                if (num1 > num2 && num1 > num3) {
+                    document.write("El primer número (" + num1 + ") es el mayor.");
+                } else if (num2 > num1 && num2 > num3) {
+                    document.write("El segundo número (" + num2 + ") es el mayor.");
+                } else if (num3 > num1 && num3 > num2) {
+                    document.write("El tercer número (" + num3 + ") es el mayor.");
+                } else {
+                    document.write("Hay dos o más números iguales, no hay un número mayor.");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/4mayordetres/index.html"><button>Ejercicio 6</button></a>
+        </section>
+
+        <section id="ejercicio7" class="ejercicio">
+            <h2>Ejercicio 7: Descuento</h2>
+            <p>El código de descuento solicita al usuario que ingrese el precio original de un producto y el porcentaje de descuento. Calcula el monto del descuento y resta esta cantidad del precio original. Finalmente, muestra el precio final después de aplicar el descuento.</p>
+            <pre><code>function calcularDescuento(monto) {
+                if (monto >= 1000) {
+                    return monto * 0.10;
+                } else {
+                    return 0;
+                }
+            }
+            
+            var montoCompra = parseFloat(prompt("Ingrese el monto total de la compra:"));
+            var descuento = calcularDescuento(montoCompra);
+            
+            document.write("El descuento aplicable es: " + descuento.toFixed(2));
+            </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/5descuento/index.html"><button>Ejercicio 7</button></a>
+        </section>
+
+        <section id="ejercicio8" class="ejercicio">
+            <h2>Ejercicio 8: Suma de los numeros Naturales </h2>
+            <p>Este código para sumar los números naturales solicita al usuario que ingrese un número entero positivo. Utiliza un bucle para sumar todos los enteros desde 1 hasta el número ingresado. Finalmente, muestra el resultado de la suma total.
+            </p>
+            <pre><code>// Solicitar al usuario que ingrese un número N
+                let N = prompt("ingresa un número N para calcular la suma de los primeros N números naturales:");
+                //convertir a entero
+                N = parseInt(N);
+                
+                // Verificar si el número ingresado es válido
+                if (N <= 0 || isNaN(N)) {
+                    document.write("El numero ingresado no es valido");
+                } else {
+                    let suma = 0;
+                    let contador = 1;
+                
+                    // Calcular la suma de los primeros N 
+                    while (contador <= N) {
+                        suma += contador;
+                        contador++;
+                    }
+                
+                    // Mostrar el resultado
+                    document.write("La suma de los primeros " + N + " numeros naturales es: " + suma + ".");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/5sumadeN/index.html"><button>Ejercicio 8</button></a>
+        </section>
+        <section id="ejercicio9" class="ejercicio">
+            <h2>Ejercicio9 :Numero primo </h2>
+            <p>El código para verificar si un número es primo solicita al usuario que ingrese un número entero positivo. Realiza divisiones para comprobar si el número solo es divisible por 1 y por sí mismo, sin obtener divisores adicionales. Finalmente, muestra un mensaje indicando si el número es primo o no.   </p>
+            <pre><code>// Solicitar al usuario que ingrese un número
+                let numero = prompt(" ingresa un numero para verificar si es primo:");
+                
+                // Convirtiendo en número entero
+                numero = parseInt(numero);
+                
+                // Verificar si el número ingresado es primo
+                let esPrimo = true;
+                
+                if (numero <= 1) {
+                    esPrimo = false;
+                } else {
+                    for (let i = 2; i <= Math.sqrt(numero); i++) {
+                        if (numero % i === 0) {
+                            esPrimo = false;
+                            break;
+                        }
+                    }
+                }
+                
+                // Mostrar el resultado 
+                if (esPrimo) {
+                    document.write(numero + " es un numero primo.");
+                } else {
+                    document.write(numero + " no es un numero primo.");
+                }</code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/6primo/index.html"><button>Ejercicio 9 </button></a>
+        </section>
+        <section id="ejercicio10" class="ejercicio">
+        <h2>Ejercicio :Tabla de multiplicar </h2>
+        <p>El código de la tabla de multiplicar solicita al usuario que ingrese un número entero. Utiliza un bucle para multiplicar ese número por los enteros del 1 al 10. Finalmente, muestra los resultados de cada multiplicación en formato de tabla.</p>
+        <pre><code>//Declare variables
+            let numero = parseInt(prompt("Ingrese un número multiplicar: "));
+            let resultado = "";
+            
+            //Process
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}\n`;
+            }
+            //Result
+            document.write(resultado);</code></pre>
+        <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+        <a href="Last/8tablademulti/index.html"><button>Ejercicio 10 </button></a>
+    </section>
+    <section id="ejercicio11 " class="ejercicio">
+            <h2>Ejercicio : Año bisiesto</h2>
+            <p>El código para determinar si un año es bisiesto solicita al usuario que ingrese un año entero. Aplica las reglas de divisibilidad: un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400. Finalmente, muestra un mensaje indicando si el año es bisiesto o no.</p>
+            <pre><code>//ingrese un año
+                let year = prompt("ingresa un año para verificar si es bisiesto:");
+                
+                year = parseInt(year);
+                
+                // Verificar si el año ingresado es bisiesto
+                let esBisiesto = false;
+                
+                if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                    esBisiesto = true;
+                }
+                
+                // Mostrar el resultado 
+                if (esBisiesto) {
+                    document.write(year + " es un año bisiesto.");
+                } else {
+                    document.write(year + " no es un año bisiesto.");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/9aniobisiesto/index.html"><button>Ejercicio 11 </button></a>
+        </section>
+        <section id="ejercicio12" class="ejercicio">
+            <h2>Ejercicio 12: Suma de digitos </h2>
+            <p>El código para sumar los dígitos de un número solicita al usuario que ingrese un número entero. Utiliza un bucle para extraer cada dígito y acumular su suma. Finalmente, muestra el resultado total de la suma de los dígitos.</p>
+            <pre><code>// Solicitar al usuario que ingrese un número
+                let numero = prompt("ingresa un número para calcular la suma de sus dígitos:");
+                
+                // Convertir el input del usuario a una cadena de texto
+                let numeroString = numero.toString();
+                
+                // Inicializar la suma de los dígitos
+                let sumaDigitos = 0;
+                
+                // Iterar sobre cada dígito del número ingresado y sumarlo
+                let i = 0;
+                while (i < numeroString.length) {
+                    let digito = parseInt(numeroString[i]);
+                    sumaDigitos += digito;
+                    i++;
+                }
+                
+                // Mostrar el resultado 
+                document.write("La suma de los dígitos de " + numero + " es: " + sumaDigitos);
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/10sumadedigitos/index.html"><button>Ejercicio 12 </button></a>
+        </section>
+        <section id="ejercicio13" class="ejercicio">
+        <h2>Ejercicio 13: Unidad de medidas</h2>
+        <p>El código de unidad de medida convierte un valor de una unidad a otra, como metros a kilómetros o grados Celsius a Fahrenheit. Solicita al usuario que ingrese el valor y la unidad de origen, así como la unidad de destino. Finalmente, calcula y muestra el resultado de la conversión.</p>
+        <pre><code>// Solicitar al usuario ingresar una temperatura
+            let temperatura = parseFloat(prompt("Ingresa la temperatura:"));
+            
+            // Solicitar al usuario ingresar la unidad de medida (Celsius o Fahrenheit)
+            let unidad = prompt("Ingresa la unidad de medida (Celsius (cel) o Fahrenheit (far)):").toLowerCase();
+            
+            // Convertir la temperatura a la otra unidad de medida
+            let temperaturaConvertida;
+            let unidadConvertida;
+            
+            if (unidad === "cel") {
+                // Convertir de Celsius a Fahrenheit
+                temperaturaConvertida = (temperatura * 9/5) + 32;
+                unidadConvertida = "Fahrenheit";
+            } else if (unidad === "far") {
+                // Convertir de Fahrenheit a Celsius
+                temperaturaConvertida = (temperatura - 32) * 5/9;
+                unidadConvertida = "Celsius";
+            } else {
+                // En caso de que la unidad ingresada no sea válida
+                alert("ingrese la medida solicitada.");
+            }
+            
+            // Mostrar la temperatura convertida
+            if (temperaturaConvertida !== undefined && unidadConvertida !== undefined) {
+                alert("La temperatura convertida es: " + temperaturaConvertida.toFixed(2) + " " + unidadConvertida);
+            }
+            </code></pre>
+        <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+        <a href="Last/ejercicio9/index.html"><button>Ejercicio 13</button></a>
+    </section>
+    <section id="ejercicio14" class="ejercicio">
+            <h2>Ejercicio 14 : Numero positivo o negativo </h2>
+            <p>Este código  es para determinar si un número es positivo o negativo solicita al usuario que ingrese un número entero. Utiliza una comparación para verificar si el número es mayor o menor que cero. Finalmente, muestra un mensaje indicando si el número es positivo, negativo o cero.</p>
+            <pre><code>//Intearct with user
+                var numero = parseFloat(prompt("Ingresa un número:"));
+                
+                // Result
+                if(numero > 0) {
+                    document.write("El número " + numero + " es positivo.");
+                } else if(numero < 0) {
+                    document.write("El número " + numero + " es negativo.");
+                } else {
+                    document.write("El número ingresado es cero.");
+                }
+                </code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/2posionega/index.html"><button>Ejercicio 14 </button></a>
+        </section>
+        <section id="ejercicio15" class="ejercicio">
+            <h2>Ejercicio 15 : Triangulo equilátero, isósceles o escaleno</h2>
+            <p>El código para verificar el tipo de triángulo solicita al usuario que ingrese las longitudes de los tres lados. Compara los lados para determinar si son iguales (equilátero), dos lados son iguales (isósceles) o todos son diferentes (escaleno). Finalmente, muestra el tipo de triángulo basado en las comparaciones realizadas.</p>
+            <pre><code>// Solicitar al usuario ingresar las longitudes de los tres lados del triángulo
+                let lado1 = parseFloat(prompt("Ingresa la medida del primer lado del triángulo:"));
+                let lado2 = parseFloat(prompt("Ingresa la medida del segundo lado del triángulo:"));
+                let lado3 = parseFloat(prompt("Ingresa la medida del tercer lado del triángulo:"));
+                
+                // Verificar si el triángulo es equilátero, isósceles o escaleno
+                if (lado1 === lado2 && lado2 === lado3) {
+                    document.write("El triángulo es equilátero");
+                } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                    document.write("El triángulo es isósceles");
+                } else {
+                    document.write("El triángulo es escaleno");
+                }</code></pre>
+            <p>Puedes dar clic en el button y pruebalo por ti mismo.</p>
+            <a href="Last/ejercicio10/index.html"><button>Ejercicio 15 </button></a>
+        </section>
+        
+
+    <footer>
+        <p>&copy; 2024 Ejercicios de Programación</p>
+    </footer>
+
+   
+</body>
+</html>
